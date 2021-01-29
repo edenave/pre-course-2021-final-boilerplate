@@ -67,5 +67,43 @@ function submitToList() {
         counter.innerText = count;
 
         }
-         
 
+const sortButton = document.getElementById("sort-button");
+
+sortButton.addEventListener("click", sortTasks)
+    function sortTasks(){
+            list = document.getElementById("taskslist");
+            priorityDiv = document.getElementsByClassName("todo-priority");
+
+                let i, switching, shouldSwitch;
+                switching = true;
+               
+
+                while (switching) {
+
+                  switching = false;
+                  b = list.getElementsByClassName("todo-priority");
+                  li = document.getElementsByTagName("li");
+
+                  
+                  for (i = 0; i < (b.length - 1); i++) {
+
+
+                    shouldSwitch = false;
+
+                    
+                    if (Number(b[i].innerHTML) > Number(b[i + 1].innerHTML)) {
+
+                        
+                      shouldSwitch = true;
+                      break;
+                    }
+                  }
+                  if (shouldSwitch) {
+
+                    
+                    li[i].parentNode.insertBefore(li[i + 1], li[i]);
+                    switching = true;
+                  }
+                }
+              }
