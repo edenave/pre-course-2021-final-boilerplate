@@ -26,7 +26,7 @@ function submitToList() {
         timeCreatedDiv.className = "todo-created-at";
 
         const priorityDiv = document.createElement("div");
-        
+
         priorityDiv.className = "todo-priority";
         const textDiv = document.createElement("div");
         textDiv.className = "todo-text";
@@ -46,7 +46,7 @@ function submitToList() {
         document.getElementById("taskslist").appendChild(listItem);
         document.getElementById("text-input").value = '';
         
-
+            count();
 
 
         selectedOption.remove(selectedOption.selectedIndex);
@@ -57,4 +57,15 @@ function submitToList() {
 
 
    
+
+
+    function count(){
+        const counter = document.getElementById("counter")
+        let ul = document.getElementById('taskslist');
+        let i=0, count =0;
+        while(ul.getElementsByTagName('li')[i++]) count++;
+        counter.innerText = count;
+
+        }
+         
 
