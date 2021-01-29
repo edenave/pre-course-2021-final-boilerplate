@@ -45,7 +45,7 @@ function submitToList() {
 
         document.getElementById("taskslist").appendChild(listItem);
         document.getElementById("text-input").value = '';
-        
+
             count();
 
 
@@ -75,7 +75,9 @@ sortButton.addEventListener("click", sortTasks)
             list = document.getElementById("taskslist");
             priorityDiv = document.getElementsByClassName("todo-priority");
 
-                let i, switching, shouldSwitch;
+                let i
+                let switching;
+                let shouldSwitch;
                 switching = true;
                
 
@@ -107,3 +109,12 @@ sortButton.addEventListener("click", sortTasks)
                   }
                 }
               }
+
+
+let viewSection = document.getElementById("view-section").innerHTML;
+
+localStorage.setItem("view-section", viewSection);
+
+function retriveViewSection(){
+    document.getElementById("view-section").innerHTML = localStorage.getItem("view-section");
+}
