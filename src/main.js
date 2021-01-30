@@ -2,6 +2,14 @@ const addButton = document.getElementById("add-button");
 
 
 
+const savedTasks = document.getElementById("taskslist");
+
+function saveData(){
+  localStorage.setItem("taskslist", savedTasks.innerHTML);
+}
+
+let localsaved =localStorage.getItem("taskslist");
+  savedTasks.innerHTML = localsaved;
 
 
 const tasksList = document.getElementById("taskslist");
@@ -42,12 +50,17 @@ function submitToList() {
 
         listItem.append(containerDiv);
 
-
+            
         document.getElementById("taskslist").appendChild(listItem);
         document.getElementById("text-input").value = '';
-
+        saveData()
             count();
 
+
+
+            
+
+            
 
         selectedOption.remove(selectedOption.selectedIndex);
         
@@ -56,7 +69,7 @@ function submitToList() {
     }
 
 
-   
+
 
 
     function count(){
@@ -111,10 +124,39 @@ sortButton.addEventListener("click", sortTasks)
               }
 
 
-let viewSection = document.getElementById("view-section").innerHTML;
 
-localStorage.setItem("view-section", viewSection);
 
-function retriveViewSection(){
-    document.getElementById("view-section").innerHTML = localStorage.getItem("view-section");
-}
+
+
+
+
+
+
+// function retriveViewSection(){
+//     let taskslist = document.getElementById("taskslist").innerHTML;
+//     taskslist = localStorage.getItem("view-section");
+//     document.getElementById("view-section").innerHTML = taskslist;
+// }
+
+
+
+
+
+// function store() {
+//     window.localStorage.myitems = list.innerHTML;
+//   }
+  
+//   function getValues() {
+//     var storedValues = window.localStorage.myitems;
+//     if(!storedValues) {
+//       list.innerHTML = '<li>Make a to do list</li>'+
+//                        '<li>Check off first thing on the to do list</li>'+
+//                        '<li>Realize you have already accomplished 2 things in the list</li>'+
+//                        '<li>Reward yourself with a nap</li>';
+//     }
+//     else {
+//       list.innerHTML = storedValues;
+//     }
+//   }
+//   getValues();
+// })();
