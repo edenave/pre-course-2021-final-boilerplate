@@ -19,20 +19,22 @@ h1{
 
 #everything{
     background-color: floralwhite;
-    border-radius: 15%;
+    border-radius: 2em;
+    padding-bottom: 3%;
 }
 
 #control-section{
     background-color: whitesmoke;
-    border-radius: 15%;
+    border-radius: 2em;
+    padding-bottom: 5vh;
+    padding-top: 1vh;
 
 
 }
 
 button{
-    width: 4em;
-    height: 2em;
-display: inline-block;
+width: 4em;
+height: 2em;
 background-color: transparent;
 border: 0.1em solid darkslategray;
 border-radius: 0.5em;
@@ -70,4 +72,32 @@ button:hover{
   #priority-selector{
       position: relative;
       text-align: center;
+      background-color: slategray;
+      color: snow;
+      font-size: medium;
+      border-radius: 0.5em;
   }
+
+
+  ul{
+      position: relative;
+      right: 3vh;
+      list-style: none;
+
+  }
+
+li{
+    background-color:lightcyan;
+    margin: 1vh;
+    border-radius: 0.5em;
+}
+
+li :hover{
+    background-color: darkslategray;
+    color:whitesmoke;
+    border-radius: 0.5em;
+}
+
+li :active{
+    background-color: darkslategray;
+}
