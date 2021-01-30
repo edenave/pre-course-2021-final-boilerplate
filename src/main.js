@@ -125,10 +125,12 @@ sortButton.addEventListener("click", sortTasks)
                     
                     li[i].parentNode.insertBefore(li[i + 1], li[i]);
                     switching = true;
+                    saveData()
+
                   }
                 }
               }
-
+ 
 
 
 
