@@ -71,15 +71,21 @@ function submitToList() {
 
 
 
-
+    const counter = document.getElementById("counter")
+    let savedCount = localStorage.getItem("counter");
     function count(){
-        const counter = document.getElementById("counter")
+
         let ul = document.getElementById('taskslist');
         let i=0, count =0;
         while(ul.getElementsByTagName('li')[i++]) count++;
-        counter.innerText = count;
+        counter.innerHTML = count;
+        localStorage.setItem("counter", counter.innerText); 
+
+
+
 
         }
+        counter.innerHTML = savedCount;
 
 const sortButton = document.getElementById("sort-button");
 
