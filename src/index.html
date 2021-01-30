@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My TODO List</title>
-
+    <script src="utils.js"></script>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
+    <section id="everything">
     <section id="control-section">
+      <h1>To Do:</h1>
         <input type="text" id="text-input" placeholder="buy bread" value="">
         <select id="priority-selector">
-          <option value="">--Please choose a Priority--</option>
+
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -23,14 +26,16 @@
 
 
     <div id="view-section">
+      <h3 id="counter-head"> current to dos: <span id="counter"> 
+
+      </span></h3>
       <ul id="taskslist">
 
       </ul>
     
-    <h3 id="counter-head"> current to dos: <span id="counter"> 
-
-    </span></h3></div> <button type="button" id="sort-button" >sort</button>
+    </div> <button type="button" id="sort-button" >sort</button>
   
 <script src="./main.js"></script>
+</section>
   </body>
 </html>
