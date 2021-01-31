@@ -98,7 +98,12 @@ li :hover{
     border-radius: 0.5em;
 }
 
+.checked{
+    background-color: darkslategray;
+}
 
-
-
-    
+.done {
+    text-decoration: line-through;
+    color: whitesmoke;
+    background-color: darkslategray;
+  }
