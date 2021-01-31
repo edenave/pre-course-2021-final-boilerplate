@@ -15,12 +15,14 @@ savedTasks.innerHTML = localsaved;
 const tasksList = document.getElementById("taskslist");
 
 addButton.addEventListener("click", submitToList)
+const listItem = document.createElement("li");
 
 function submitToList() {
 
-    const listItem = document.createElement("Li");
+
     const text = document.getElementById("text-input").value;
     const selectedItem = document.getElementById("priority-selector").value;
+
     const listValue = document.createTextNode(text);
 
 
@@ -34,6 +36,10 @@ function submitToList() {
 
     const priorityDiv = document.createElement("div");
 
+    const checkbox = document.createElement("input");
+    checkbox.setAttribute("type", "checkbox");
+    checkbox.className("checked")
+
     priorityDiv.className = "todo-priority";
     const textDiv = document.createElement("div");
     textDiv.className = "todo-text";
@@ -45,14 +51,14 @@ function submitToList() {
         priorityDiv.append(selectedItem);
         timeCreatedDiv.append(new Date().toISOString().slice(0, 19).replace('T', ' '));
 
-        containerDiv.append(priorityDiv, timeCreatedDiv, textDiv);
+        containerDiv.append(checkbox, priorityDiv, timeCreatedDiv, textDiv);
 
         listItem.append(containerDiv);
 
 
         document.getElementById("taskslist").appendChild(listItem);
         document.getElementById("text-input").value = '';
-        saveData()
+        saveData();
         count();
 
 
@@ -132,9 +138,4 @@ function sortTasks() {
 }
 
 
-
-
-
-
-
-
+const checked = document.getElementsByClassName("checked")
