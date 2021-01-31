@@ -18,7 +18,8 @@ addButton.addEventListener("click", submitToList)
 
 function submitToList() {
 
-        const listItem = document.createElement("Li");
+        const listItem = document.createElement("li");
+        listItem.className = "li";
         const text = document.getElementById("text-input").value;
         const selectedItem = document.getElementById("priority-selector").value;
         const selectedOption = document.getElementById("priority-selector");
@@ -39,7 +40,7 @@ function submitToList() {
         const textDiv = document.createElement("div");
         textDiv.className = "todo-text";
 
-        const deleteButton = document.createElement("span");
+        const deleteButton = document.createElement("button");
         deleteButton.innerText = 'x';
         deleteButton.className = "delete-button"
 
