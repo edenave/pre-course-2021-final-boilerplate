@@ -38,6 +38,11 @@ function submitToList() {
         priorityDiv.className = "todo-priority";
         const textDiv = document.createElement("div");
         textDiv.className = "todo-text";
+
+        const deleteButton = document.createElement("span");
+        deleteButton.innerText = 'x';
+        deleteButton.className = "delete-button"
+
         if(text === ''){
             alert('no task entered')
         } else {
@@ -46,7 +51,7 @@ function submitToList() {
             priorityDiv.append(selectedItem);
             timeCreatedDiv.append(new Date().toISOString().slice(0, 19).replace('T', ' '));
 
-            containerDiv.append(priorityDiv, timeCreatedDiv, textDiv);
+            containerDiv.append(priorityDiv, deleteButton, timeCreatedDiv, textDiv);
 
         listItem.append(containerDiv);
 
@@ -138,5 +143,8 @@ list1.addEventListener('click', function(ev) {
 
     ev.target.classList.toggle('done');
     ev.target.parentNode.classList.toggle('done')
+    saveData()
 
   }, false);
+
+

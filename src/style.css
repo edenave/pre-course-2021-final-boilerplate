@@ -106,4 +106,5 @@ li :hover{
     text-decoration: line-through;
     color: whitesmoke;
     background-color: darkslategray;
+    border-radius: 0.5em;
   }
