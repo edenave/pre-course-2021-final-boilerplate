@@ -1,13 +1,7 @@
-# ![Scale-Up Velocity](./readme-files/logo-main.png) Pre Course Project - Todo List 📋
+# Scale Up Velocity Pre-Course Final!
 
-This project will include most of the topics we have learnt so far.
-This repository includes a basic skeleton template with automated tests, use it for your submissions.
+In this javascript todo list application. You can add/remove todos, sort them by priority, reset the whole page, and turn into night mode. The App was built with html, css and javascript, hope you will like it.
 
-In this project you will create a Todo List Web Application, in which the user can store prioritized _todo tasks_ and view/sort that list.
-
-Here is a preview sample of the desired functionality (without styling):
-
-![Add todo task](./readme-files/basic-todo.gif)
 
 ## Instructions
 

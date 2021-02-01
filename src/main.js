@@ -20,7 +20,7 @@ function submitToList() {
 
 
   const listItem = document.createElement("li");
-    listItem.className = "li";
+  listItem.className = "li";
 
   const text = document.getElementById("text-input").value;
   const selectedItem = document.getElementById("priority-selector").value;
@@ -90,7 +90,7 @@ function count() {
   let ul = document.getElementById('taskslist');
   let i = 0, count = 0;
   while (ul.getElementsByTagName('li')[i++])
-  count++;
+    count++;
   counter.innerHTML = count;
 
   localStorage.setItem("counter", counter.innerHTML);
@@ -120,22 +120,17 @@ function sortTasks() {
     b = list.getElementsByClassName("todo-priority");
     li = document.getElementsByTagName("li");
 
-
     for (i = 0; i < (b.length - 1); i++) {
-
 
       shouldSwitch = false;
 
-
       if (Number(b[i].innerHTML) < Number(b[i + 1].innerHTML)) {
-
 
         shouldSwitch = true;
         break;
       }
     }
     if (shouldSwitch) {
-
 
       li[i].parentNode.insertBefore(li[i + 1], li[i]);
       switching = true;
@@ -175,7 +170,6 @@ let savedRemaining = localStorage.getItem("remaining");
 
 document.getElementById('remaining').innerHTML = savedRemaining;
 
-
 const resetButton = document.getElementById('reset');
 
 resetButton.addEventListener('click', removeLocalStorage)
@@ -196,18 +190,17 @@ const darkModeButton = document.getElementById("dark-mode");
 
 darkModeButton.addEventListener('click', getSpooky)
 
-  function getSpooky(){
+function getSpooky() {
   let body = document.body;
   let viewSection = document.getElementById("view-section");
   let controlSection = document.getElementById("control-section");
   let everythingSection = document.getElementById("everything");
   let headers = document.querySelector('.counter-head');
-  let buttons = document.getElementsByClassName('buttons');
   body.classList.toggle('darkMode');
   viewSection.classList.toggle('everything-dark');
   controlSection.classList.toggle('everything-dark');
   everythingSection.classList.toggle('everything-dark');
   headers.classList.toggle('darkHeader');
-  }
+}
 
 
