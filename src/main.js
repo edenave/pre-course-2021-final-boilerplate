@@ -4,6 +4,7 @@ let remaining = 0;
 
 const savedTasks = document.getElementById("taskslist");
 
+
 function saveData(){
   localStorage.setItem("taskslist", savedTasks.innerHTML);
 }
@@ -170,4 +171,19 @@ saveData()
 
 let savedRemaining = localStorage.getItem("remaining");
 
-document.getElementById('remaining').innerHTML = savedRemaining
+document.getElementById('remaining').innerHTML = savedRemaining;
+
+
+const resetButton = document.getElementById('reset');
+
+resetButton.addEventListener('click', removeLocalStorage)
+
+function removeLocalStorage(){
+    localStorage.removeItem("taskslist");
+    localStorage.removeItem("remaining");
+    localStorage.removeItem("counter");
+    counter.innerText = '';
+
+    document.getElementById('remaining').innerHTML = '';
+    savedTasks.innerHTML = '';
+}
