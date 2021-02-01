@@ -1,7 +1,6 @@
 const addButton = document.getElementById("add-button");
 
 let remaining = 0;
-
 const savedTasks = document.getElementById("taskslist");
 
 
@@ -19,8 +18,10 @@ addButton.addEventListener("click", submitToList)
 
 function submitToList() {
 
+
   const listItem = document.createElement("li");
-  listItem.className = "li";
+    listItem.className = "li";
+
   const text = document.getElementById("text-input").value;
   const selectedItem = document.getElementById("priority-selector").value;
   const selectedOption = document.getElementById("priority-selector");
@@ -88,7 +89,8 @@ function count() {
 
   let ul = document.getElementById('taskslist');
   let i = 0, count = 0;
-  while (ul.getElementsByTagName('li')[i++]) count++;
+  while (ul.getElementsByTagName('li')[i++])
+  count++;
   counter.innerHTML = count;
 
   localStorage.setItem("counter", counter.innerHTML);
@@ -194,20 +196,18 @@ const darkModeButton = document.getElementById("dark-mode");
 
 darkModeButton.addEventListener('click', getSpooky)
 
-function getSpooky(){
+  function getSpooky(){
   let body = document.body;
   let viewSection = document.getElementById("view-section");
   let controlSection = document.getElementById("control-section");
   let everythingSection = document.getElementById("everything");
   let headers = document.querySelector('.counter-head');
+  let buttons = document.getElementsByClassName('buttons');
   body.classList.toggle('darkMode');
   viewSection.classList.toggle('everything-dark');
   controlSection.classList.toggle('everything-dark');
   everythingSection.classList.toggle('everything-dark');
-  headers.classList.toggle('darkHeader')
-let liDark = document.getElementsByClassName('li')
-let ul = document.getElementById('taskslist')
-  for(let i = 0; i < liDark.length; i++){
-    liDark[i].classList.toggle("liDark");
+  headers.classList.toggle('darkHeader');
   }
-}
+
+

@@ -35,13 +35,13 @@ h1{
 button{
 width: 4em;
 height: 2em;
-background-color: transparent;
+background-color: rgba(90, 130, 171, 0.8);
 border: 0.1em solid darkslategray;
 border-radius: 0.5em;
 box-sizing: border-box;
 text-decoration: none;
 font-weight:bold;
-color: darkslategray;
+color:whitesmoke;
 text-align: center;
 transition: all 0.2s;
 }
@@ -86,17 +86,6 @@ button:hover{
 
   }
 
-li{
-    background-color:lightcyan;
-    margin: 1vh;
-    border-radius: 0.5em;
-}
-
-li :hover{
-    background-color: darkslategray;
-    color:whitesmoke;
-    border-radius: 0.5em;
-}
 
 .checked{
     background-color: darkslategray;
@@ -119,6 +108,19 @@ li :hover{
     border: transparent;
 }
 
+.li{
+    background-color:rgba(90, 130, 171, 0.8);
+    margin: 1vh;
+    border-radius: 0.5em;
+}
+
+.li :hover{
+    background-color: darkslategray;
+    color:whitesmoke;
+    border-radius: 0.5em;
+}
+
+
 
 
 
@@ -127,12 +129,18 @@ li :hover{
   }
 
 
-  #reset{
+  #reset {
       margin: 4vh;
       width: 8vw;
     font-weight: bolder;
       
   }
+  #dark-mode{
+    margin: 4vh;
+    width: 8vw;
+  font-weight: bolder;
+  }
+
 
 
 .darkMode {
@@ -157,18 +165,13 @@ li :hover{
 }
 
 
-.liDark{
-    background-color:darkgray;
-    margin: 1vh;
-    border-radius: 0.5em;
-}
-
-li.liDark :hover{
-    background-color: gainsboro;
-    color:whitesmoke;
-    border-radius: 0.5em;
-}
 
 .darkHeader{
     color: ghostwhite;
 }
+
+
+
+
+
+
