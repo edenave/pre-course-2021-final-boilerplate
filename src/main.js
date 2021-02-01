@@ -1,6 +1,6 @@
 const addButton = document.getElementById("add-button");
 
-
+let remaining = 0;   
 
 const savedTasks = document.getElementById("taskslist");
 
@@ -54,6 +54,8 @@ function submitToList() {
 
             containerDiv.append(deleteButton, priorityDiv, timeCreatedDiv, textDiv);
 
+
+
         listItem.append(containerDiv);
 
             
@@ -62,7 +64,9 @@ function submitToList() {
         saveData()
             count();
 
-
+            remaining++;
+            document.getElementById('remaining').innerHTML =  remaining;
+            localStorage.setItem("remaining", document.getElementById('remaining').innerHTML); 
 
             
 
@@ -85,7 +89,8 @@ function submitToList() {
         let i=0, count =0;
         while(ul.getElementsByTagName('li')[i++]) count++;
         counter.innerHTML = count;
-        localStorage.setItem("counter", counter.innerText); 
+
+        localStorage.setItem("counter", counter.innerHTML); 
 
 
 
@@ -148,21 +153,21 @@ list1.addEventListener('click', function(ev) {
 
   }, false);
 
-  var list = document.querySelector('ul');
-  list.addEventListener('click', function(ev) {
+
+  list1.addEventListener('click', function(ev) {
     if (ev.target.className === 'delete-button') {
       ev.target.classList.toggle('delete');
       ev.target.parentNode.classList.toggle('delete')
-      countLess()
+        if(remaining > 0){
+      remaining--;
+    }
+      document.getElementById('remaining').innerHTML =  remaining;
+      localStorage.setItem("remaining", document.getElementById('remaining').innerHTML); 
+saveData()
     }
   }, false);
 
 
-  function countLess(){
+let savedRemaining = localStorage.getItem("remaining");
 
-    let ul = document.getElementById('taskslist');
-    let i=0, count =0;
-    while(ul.getElementsByTagName('li')[i++]) count++;
-    counter.innerHTML = count-count[i];
-    localStorage.setItem("counter", counter.innerText); 
-  };
+document.getElementById('remaining').innerHTML = savedRemaining

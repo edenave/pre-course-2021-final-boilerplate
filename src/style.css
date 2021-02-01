@@ -108,6 +108,18 @@ li :hover{
     background-color: darkslategray;
     border-radius: 0.5em;
   }
+.delete-button{
+    position: absolute;
+    right: 3%;
+    width:10%;
+    height: 3vh;
+    text-align: center;
+    background-color:tomato;
+    color: whitesmoke;
+    border: transparent;
+}
+
+
 
 
   .delete{
