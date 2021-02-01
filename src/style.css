@@ -17,13 +17,13 @@ h1{
     color:darkslategray;
 }
 
-#everything{
+.everythingLightMode{
     background-color: floralwhite;
     border-radius: 2em;
     padding-bottom: 3%;
 }
 
-#control-section{
+.controlLightMode{
     background-color: whitesmoke;
     border-radius: 2em;
     padding-bottom: 5vh;
@@ -129,5 +129,46 @@ li :hover{
 
   #reset{
       margin: 4vh;
-      width: auto;
+      width: 8vw;
+    font-weight: bolder;
+      
   }
+
+
+.darkMode {
+    
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(61,61,111,1) 32%, rgba(0,110,111,1) 100%);
+    margin: auto;
+    width: 30%;
+    padding: 10vh;
+    text-align: center;
+    color: whitesmoke;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3vh;
+
+}
+
+
+.everything-dark{
+    background-color:darkslateblue;
+    border-radius: 2em;
+    padding-bottom: 3%;
+}
+
+
+.liDark{
+    background-color:darkgray;
+    margin: 1vh;
+    border-radius: 0.5em;
+}
+
+li.liDark :hover{
+    background-color: gainsboro;
+    color:whitesmoke;
+    border-radius: 0.5em;
+}
+
+.darkHeader{
+    color: ghostwhite;
+}
