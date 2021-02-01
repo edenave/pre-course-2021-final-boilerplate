@@ -108,3 +108,8 @@ li :hover{
     background-color: darkslategray;
     border-radius: 0.5em;
   }
+
+
+  .delete{
+      display: none;
+  }

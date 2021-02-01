@@ -52,7 +52,7 @@ function submitToList() {
             priorityDiv.append(selectedItem);
             timeCreatedDiv.append(new Date().toISOString().slice(0, 19).replace('T', ' '));
 
-            containerDiv.append(priorityDiv, deleteButton, timeCreatedDiv, textDiv);
+            containerDiv.append(deleteButton, priorityDiv, timeCreatedDiv, textDiv);
 
         listItem.append(containerDiv);
 
@@ -148,4 +148,21 @@ list1.addEventListener('click', function(ev) {
 
   }, false);
 
+  var list = document.querySelector('ul');
+  list.addEventListener('click', function(ev) {
+    if (ev.target.className === 'delete-button') {
+      ev.target.classList.toggle('delete');
+      ev.target.parentNode.classList.toggle('delete')
+      countLess()
+    }
+  }, false);
 
+
+  function countLess(){
+
+    let ul = document.getElementById('taskslist');
+    let i=0, count =0;
+    while(ul.getElementsByTagName('li')[i++]) count++;
+    counter.innerHTML = count-count[i];
+    localStorage.setItem("counter", counter.innerText); 
+  };
